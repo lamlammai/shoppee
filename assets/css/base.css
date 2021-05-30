@@ -9,6 +9,7 @@
     --header-height: 120px;
     --navbar-height: 34px;
     --header-with-search: calc(var(--header-height) - var(--navbar-height));
+    --header__sort-bar-hight: 46px;
 }
 
 * {
@@ -27,22 +28,12 @@ html {
 
 /* reponsive */
 
-.grid {
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.grid__full-width {
-    width: 100%;
-}
-
 .grid__row {
     display: flex;
     /* nam ngang */
     flex-wrap: wrap;
     margin-left: -5px;
-    margin-right: -5px;
+    /* margin-right: -5px; */
 }
 
 

@@ -1,0 +1,132 @@
+/* mobile tablet */
+
+@media (max-width: 1023px) {
+    .hidden-on-mobile-tablet {
+        display: none;
+    }
+    .header-cart-list {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) /2);
+    }
+    .header-cart-list::before {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        z-index: 4;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    .app__container {
+        padding-top: calc(var(--header-height) + var(--header__sort-bar-hight));
+    }
+    .header__sort-bar {
+        display: flex;
+    }
+    .app-content {
+        padding-top: 8px;
+    }
+    .mobile-category {
+        display: block;
+    }
+    .header-logo-img {
+        width: 110px;
+    }
+}
+
+
+/* tablet */
+
+@media (min-width: 740px) and (max-width: 1023px) {
+     :root {
+        --header-height: 60px;
+        --navbar-height: 0;
+    }
+    .hidden-on-tablet {
+        display: none;
+    }
+    .header-cart {
+        width: 80px;
+        text-align: right;
+    }
+    .header-cart-notice {
+        right: 5px;
+    }
+}
+
+
+/* mobile */
+
+@media (max-width: 740px) {
+     :root {
+        --header-height: 54px;
+        --navbar-height: 0;
+    }
+    .hidden-on-mobile {
+        display: none;
+    }
+    .header-with-search {
+        justify-content: space-between;
+    }
+    .header-cart,
+    .header-logo {
+        width: unset;
+    }
+    .header-cart-notice {
+        right: -15px;
+    }
+    .header-search {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        z-index: 1;
+        padding: 0 15px;
+        animation: mobileSearchSidein linear 0.3s;
+        display: none;
+    }
+    .header-search-history {
+        position: fixed;
+        top: calc(var(--header-height) + var(--header__sort-bar-hight));
+        width: 100%;
+        left: 0;
+    }
+    .pagination-item {
+        margin: 0;
+    }
+    .pagination-item-link {
+        font-size: 15px;
+        height: 28px;
+        min-width: 36px;
+    }
+    .app-content {
+        margin: 0 4px;
+    }
+    .header__mobile-search {
+        display: block;
+    }
+    .footer-content {
+        padding: 0 16px;
+    }
+    .footer__heading {
+        text-align: center;
+    }
+    .footer-download,
+    .footer__list-item-link {
+        justify-content: center;
+    }
+    @keyframes mobileSearchSidein {
+        from {
+            top: calc(var(--header-height) / 2);
+            opacity: 0;
+        }
+        to {
+            top: var(--header-height);
+            opacity: 1;
+        }
+    }
+}
